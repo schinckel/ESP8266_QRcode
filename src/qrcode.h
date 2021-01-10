@@ -1,13 +1,13 @@
-#include "OLEDDisplay.h"
+#include "esphome.h"
 
 class QRcode
 {
 	private:
-		OLEDDisplay *display;
+    esphome::display::DisplayBuffer *display;
 		void render(int x, int y, int color);
 
 	public:
-		QRcode(OLEDDisplay *display);
+		QRcode(esphome::display::DisplayBuffer *display);
 
 		void init();
 		void debug();
